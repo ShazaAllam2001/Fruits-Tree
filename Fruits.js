@@ -393,7 +393,7 @@ function Medium(Weight) {
     return instance;
 }
 
-function ElderBerry(Weight) {
+function Elderberry(Weight) {
     var instance = new Tiny();
     instance.weight = Weight;
     instance.getType = function() {

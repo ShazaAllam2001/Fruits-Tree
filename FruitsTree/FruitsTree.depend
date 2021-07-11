@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1625872737 source:a:\codeblocks\fruitstree\main.cpp
+	<iostream>
+

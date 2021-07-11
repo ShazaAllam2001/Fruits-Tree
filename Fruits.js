@@ -57,6 +57,7 @@ Fruit.prototype.Iterate = function() {
 
 Fruit.prototype.filterByType = function(Type) {
     // Traverse the tree all the nodes of the Type passed
+    var TreeRoot = this;
     function recursiveInorder(root) {
         if(root == undefined) {
             return;
@@ -68,7 +69,7 @@ Fruit.prototype.filterByType = function(Type) {
         recursiveInorder(root.right);
     }
 
-    return recursiveInorder(this);
+    return recursiveInorder(TreeRoot);
 }
 
 Fruit.prototype.filterByWeight = function(Weight) {

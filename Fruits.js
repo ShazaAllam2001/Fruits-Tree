@@ -357,16 +357,6 @@ function Dragonfruit(Weight) {
     }
     return instance;
 }
-function Lychee(Weight) {
-    var instance = new Round();
-    instance.weight = Weight;
-    instance.getType = function() {
-        let parent1 = new Round();
-        let parent2 = new Tropical();
-        return "Lychee ".concat(parent1.getType(), parent2.getType());
-    }
-    return instance;
-}
 
 // Berries Category
 function Berry(Weight) {

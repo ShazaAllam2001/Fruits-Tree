@@ -94,26 +94,25 @@ Fruit.prototype.magnifyByType = function(Type, Weight) {
 }
 
 Fruit.prototype.findLightest = function() {
-    var root = this;
-    if(root == undefined) {
-        return;
+    function lightest(n) {
+        if(n != undefined) {
+            return;
+        } else {
+            return lightest(n.left);
+        }
     }
-
-    while(root.left != undefined) {
-        root = root.left;
-    }
-    return root;
+    return lightest(this);
 }
 
 Fruit.prototype.findHeaviest = function () {
-    var root = this;
-    if(root == undefined) {
-        return;
+    function heaviest(n) {
+        if(n != undefined) {
+            return;
+        } else {
+            return heaviest(n.right);
+        }
     }
-    while(root.right != null) {
-        root = root.right;
-    }
-    return root;
+    return heaviest(this);
 }
 
 /* Helper functions  */

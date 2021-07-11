@@ -1,7 +1,7 @@
+/* Fruit constructor creates an object of the prototype then returns it */
 function Fruit(Weight) {
     var instance = Object.create(Fruit.prototype);
 
-    /* */
     instance.weight = Weight;
     /* intialize the parent node to undefined */
     instance.parent = undefined;
@@ -41,6 +41,7 @@ Fruit.prototype.Insert = function(fruit) {
     }
 }
 
+/* Iterate over all node in the tree and print them in an ascending order */
 Fruit.prototype.Iterate = function() {
     var TreeRoot = this;
     function recursiveInorder(root) {
@@ -55,7 +56,7 @@ Fruit.prototype.Iterate = function() {
 }
 
 Fruit.prototype.filterByType = function(Type) {
-    // Traverse the tree and magnify all the nodes of the Type passed
+    // Traverse the tree all the nodes of the Type passed
     function recursiveInorder(root) {
         if(root == undefined) {
             return;
@@ -71,6 +72,7 @@ Fruit.prototype.filterByType = function(Type) {
 }
 
 Fruit.prototype.filterByWeight = function(Weight) {
+    // prints all nodes higher than Weight using two helper function passed by another helper function
     higherThan(ceilingNode(this, Weight), successor);
 }
 

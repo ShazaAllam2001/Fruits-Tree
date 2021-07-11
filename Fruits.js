@@ -95,7 +95,7 @@ Fruit.prototype.magnifyByType = function(Type, Weight) {
 
 Fruit.prototype.findLightest = function() {
     function lightest(n) {
-        if(n != undefined) {
+        if(n == undefined) {
             return;
         } else {
             return lightest(n.left);
@@ -106,7 +106,7 @@ Fruit.prototype.findLightest = function() {
 
 Fruit.prototype.findHeaviest = function () {
     function heaviest(n) {
-        if(n != undefined) {
+        if(n == undefined) {
             return;
         } else {
             return heaviest(n.right);

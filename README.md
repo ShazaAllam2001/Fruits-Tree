@@ -1,2 +1,2 @@
-# Lab_03_Paradigms
-source code for Fruit Tree assignment using three different paradigms
+# Fruits-Tree
+Fruits Tree implementation using three different paradigms
